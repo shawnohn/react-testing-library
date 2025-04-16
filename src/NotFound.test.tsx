@@ -13,10 +13,8 @@ describe("<NotFound />", () => {
 
   it("renders paragraph", () => {
     render(<NotFound path="/abc" />);
-    const paragraph = screen.getByText(/^해당 페이지/);
-    expect(paragraph).toHaveTextContent(
-      "해당 페이지(/abc)를 찾을 수 없습니다."
-    );
+    const paragraph = screen.getByText(/^Page/);
+    expect(paragraph).toHaveTextContent("Page (/abc) Not Found.");
   });
 
   it("renders image", () => {
